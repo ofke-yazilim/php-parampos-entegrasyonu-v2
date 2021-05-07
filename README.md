@@ -1,9 +1,9 @@
-##Param Entegrasyonu V2
+## Param Entegrasyonu V2 ##
 Bu proje PHP yazılım dili ve 
 <a href='https://dev.param.com.tr/tr/api'>https://dev.param.com.tr/tr/api</a> 
 dökümantasyonu kullanılarak kodlandı.
 
-####Konfigirasyon Tanımlamaları
+#### Konfigirasyon Tanımlamaları
  - İşletmeye ait olan tanımlamalar. **`Config/index.php`** dosyası üzerinde tanımlanmalıdır.<br>
  - *`Config/index.php`* dosyası içerisinde tanımlı olarak bulunan `WHICH`(7.satır) parametresi iki değer alabiliyor.
  eğer test üzerinde işlem yürütmek istiyorsanız `TEST`, 
@@ -14,6 +14,10 @@ dökümantasyonu kullanılarak kodlandı.
  yönlendirileceği adresleri yine *`Config/index.php`* dosyasında tanımlamalısınız.(30 ve 31. satırlar)
  
  
- ####Örnek 3D PAY(Ödeme) örneği
+ #### Örnek 3D PAY(Ödeme) örneği
+ - 3D Pay ile öedemeye ait örnek çalışan kodlar için <a target='_blank' href='https://github.com/ofke-yazilim/parampos-v2/blob/master/index.php'>https://github.com/ofke-yazilim/parampos-v2/blob/master/index.php</a>
+ dosyasından inceleyebilirsiniz.
  
+ #### Örnek Kullanıcı Özel Pos Oranlarının Alınması
+ - Özel Taksit oranlarının çekildiği örnek çalışan kodlar için <a target='_blank' href='https://github.com/ofke-yazilim/parampos-v2/blob/master/installment.php'>https://github.com/ofke-yazilim/parampos-v2/blob/master/installment.php</a> dosyasını inceleyebilirisiniz.
  
