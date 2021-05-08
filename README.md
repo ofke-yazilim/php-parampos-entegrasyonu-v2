@@ -4,7 +4,7 @@ Bu proje PHP yazılım dili ve
 dökümantasyonu kullanılarak kodlandı.
 
 ### Örnek Çalışan Proje
-<a href="http://okesmez.com/parampos-v2/test.php">http://okesmez.com/parampos-v2/test.php</a> bağlantısından örnek çalışan projeye ulaşabilirisniz.
+<a target="_blank" href="http://okesmez.com/parampos-v2/test.php">http://okesmez.com/parampos-v2/test.php</a> bağlantısından örnek çalışan projeye ulaşabilirisniz.
 
 #### Konfigirasyon Tanımlamaları
  - İşletmeye ait olan tanımlamalar. **`Config/index.php`** dosyası üzerinde tanımlanmalıdır.<br>
