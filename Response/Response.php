@@ -9,8 +9,9 @@ class Response
     public $hash_filter        = "'<SHA2B64Result>(.*?)</SHA2B64Result>'si";
     public $secure3D_filter    = "'<ucd_url>(.*?)</ucd_url>'si";
     public $installment_filter = "'<DT_Ozel_Oranlar(.*?)</DT_Ozel_Oranlar>'si";
+    public $bin_filter         = "'<Temp(.*?)</Temp>'si";
 
-    public $result          = '';
+    public $result             = '';
 
     /**
      * @param $responseXml
@@ -88,6 +89,17 @@ class Response
 
         $this->result = $installment;
         return $installment;
+    }
+
+    public function bin($responseXml){
+        preg_match($this->bin_filter, $responseXml, $match);
+
+        preg_match("'<SanalPOS_ID>(.*?)</SanalPOS_ID>'si", $match[1], $pos_id);
+
+        //echo($responseXml);
+
+        $this->result  = $pos_id[1];
+        return $pos_id[1];
     }
 
 }

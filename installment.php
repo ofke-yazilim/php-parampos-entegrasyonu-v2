@@ -23,5 +23,6 @@ $response = $request->sendRequest($request_xml, 'installment');
 $taksit_oranlari = $request->result;
 
 echo '<pre>';
-var_dump($taksit_oranlari);
+print_r($taksit_oranlari);
 echo '</pre>';
+

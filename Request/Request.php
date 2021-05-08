@@ -9,6 +9,7 @@ class Request extends Response
     public $Hash             = '?op=SHA2B64&WSDL';
     public $secure3D         = '?op=Pos_Odeme&WSDL';
     public $installment      = '?op=TP_Ozel_Oran_Liste&WSDL';
+    public $bin              = '?op=BIN_SanalPos&WSDL';
 
     /**
      * 3d secure rquest xml hazırlanıyor
@@ -26,6 +27,17 @@ class Request extends Response
      */
     public function setInstallmentXml($parameters){
         $xml = file_get_contents('xml/installment.xml');
+        foreach ($parameters as  $key=>$parameter){
+            $xml = str_replace($key,$parameter,$xml);
+        }
+        return $xml;
+    }
+
+    /**
+     * Bin verilerine göre kart bilgisini dönecek olan xml hazırlanıyor
+     */
+    public function setBinXml($parameters){
+        $xml = file_get_contents('xml/bin.xml');
         foreach ($parameters as  $key=>$parameter){
             $xml = str_replace($key,$parameter,$xml);
         }
