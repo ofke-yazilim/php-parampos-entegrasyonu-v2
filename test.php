@@ -144,7 +144,7 @@ span.price {
         </div>
         <input type="hidden" id="pos_id" name="pos_id" >
         <input type="hidden" id="total" name="total" >
-        <input type="submit" value="Onayla" class="btn">
+        <input type="submit" value="Onayla" id="btn" class="btn" style="background-color: #dddddd">
       </form>
 	  
     </div>
@@ -176,11 +176,24 @@ span.price {
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script>
+
+document.getElementById("btn").disabled = true;
 $(document).ready(function(){
+
 
     $(document).on("click",".cpos_id",function() {
         var $total = $(this).attr('total');
         $('#total').val($total);
+    });
+
+    $('#ccnum').keyup(function(e){
+        if(e.key == "Backspace"){
+            var _length = $(this).val().length;
+            if(_length < 6){
+                document.getElementById("btn").disabled = false;
+                $('.btn').css("background-color","#dddddd");
+            }
+        }
     });
 
   $("#ccnum").keyup(function(){
@@ -207,6 +220,8 @@ $(document).ready(function(){
 			   console.log(json);
 			   $(".oranlar").html(json.table);
 			   $("#pos_id").val(json.pos_id);
+                document.getElementById("btn").disabled = false;
+                $('.btn').removeAttr('style');
 			},
 			error: function(xhr, ajaxOptions, thrownError) {
 				alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
@@ -245,6 +260,8 @@ $(document).ready(function(){
 			   console.log(json);
 			   $(".oranlar").html(json.table);
 			   $("#pos_id").val(json.pos_id);
+                document.getElementById("btn").disabled = false;
+                $('.btn').removeAttr('style');
 			},
 			error: function(xhr, ajaxOptions, thrownError) {
 				alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
