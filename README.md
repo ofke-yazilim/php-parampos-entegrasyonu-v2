@@ -3,6 +3,9 @@ Bu proje PHP yazılım dili ve
 <a href='https://dev.param.com.tr/tr/api'>https://dev.param.com.tr/tr/api</a> 
 dökümantasyonu kullanılarak kodlandı.
 
+### Örnek Çalışan Proje
+<a href="http://okesmez.com/parampos-v2/test.php">http://okesmez.com/parampos-v2/test.php</a> bağlantısından örnek çalışan projeye ulaşabilirisniz.
+
 #### Konfigirasyon Tanımlamaları
  - İşletmeye ait olan tanımlamalar. **`Config/index.php`** dosyası üzerinde tanımlanmalıdır.<br>
  - *`Config/index.php`* dosyası içerisinde tanımlı olarak bulunan `WHICH`(7.satır) parametresi iki değer alabiliyor.
